@@ -1,6 +1,7 @@
 <?php
 	include('../../assets/php/sql_conn.php');	
-
+	ini_set('display_errors', 0);
+	
 	if(isset($_GET['bill_id'])){
 		$bill_id = $_GET['bill_id'];
 	}else{
@@ -23,7 +24,7 @@
 include('bill_html.php');
 echo $message;
 
-require_once '../../assets/dompdf/autoload.inc.php';
+/*require_once '../../assets/dompdf/autoload.inc.php';
 
 // reference the Dompdf namespace
 use Dompdf\Dompdf;
@@ -39,7 +40,7 @@ $dompdf->loadHtml($message);
 $dompdf->setPaper('A4', 'landscape');
 
 // Render the HTML as PDF
-$dompdf->render();
+$dompdf->render();*/
 
 // Output the generated PDF to Browser
 //$dompdf->stream("jewellery_bill.pdf");

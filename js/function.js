@@ -864,7 +864,7 @@
 
 				//Redirect to the printer page
 				if($final_bill == 1){
-					var URL = 'http://localhost/jewellery_v2/pages/bill_printer/bill_pdf.php?bill_id='+$current_bill_id;
+					var URL = 'http://localhost/jewellery/pages/bill_printer/bill_pdf.php?bill_id='+$current_bill_id;
 					window.open(URL, '_blank');
 				}
 				
