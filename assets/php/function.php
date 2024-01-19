@@ -291,7 +291,9 @@
 			$current_bill_id = $bill_id;
 		} else {
 			//Insert
-			$sql_insert = "INSERT INTO bill_details (customer_id, bill_description) VALUES('".$customer_id."', '".base64_encode($bill_description)."')";
+			date_default_timezone_set('Asia/Kolkata');
+			$create_date = date('Y-m-d H:i:s');
+			$sql_insert = "INSERT INTO bill_details (customer_id, bill_description, create_date) VALUES('".$customer_id."', '".base64_encode($bill_description)."', '" .$create_date. "')";
 			$result_insert = $mysqli->query($sql_insert);
 			$current_bill_id = $mysqli->insert_id;
 		}
